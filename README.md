@@ -1,73 +1,29 @@
-# React + TypeScript + Vite
+# ToDo List – Study Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **study application** built with React, based on the layout and idea of Rocketseat’s ToDo challenge, and adapted for personal learning purposes.
 
-Currently, two official plugins are available:
+## 💡 Goal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Practice fundamental React concepts (components, state, immutability).
+- Recreate a modern task list layout inspired by Rocketseat’s challenge.
+- Organize the codebase in a clean way to make future features easier to add.
 
-## React Compiler
+## ✅ What’s done so far
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Main ToDo screen with:
+  - Task creation.
+  - Task listing.
+  - Marking tasks as completed.
+  - Deleting tasks.
+- Counters for created and completed tasks.
+- Responsive dark-theme layout inspired by Rocketseat’s design.
 
-## Expanding the ESLint configuration
+## 🔜 Next steps
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The next step for this project is to:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Integrate authentication and data persistence with **Firebase**, including:
+  - Login and sign up (with Google login support).
+  - Per-user task storage, so each user can access their own lists across sessions and devices.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This repository will be updated as new features are implemented.
